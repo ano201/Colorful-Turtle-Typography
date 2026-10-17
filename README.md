@@ -3,8 +3,7 @@
 A custom Python project built using Turtle graphics to dynamically render text strings with individual character functions, automated loops, and vibrant color cycling.
 
 ## 📸 Preview
-![Colorful Turtle Typography Output](screenshot.png) 
-*(Note: Replace `screenshot.png` with your actual screenshot filename)*
+![Colorful Turtle Typography Output](screenshot.png)
 
 ## ✨ Supported Characters (Current)
 The engine currently supports the following characters, with more letters coming soon:
