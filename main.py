@@ -4,7 +4,6 @@ import turtle
 
 words = input("Enter your text: ").lower()
 
-
 # turtle screen setup
 screen = turtle.Screen()
 screen.setup(width=600, height=400)
@@ -23,9 +22,9 @@ t.shape('turtle')
 t.shapesize(0.5, 0.5)
 
 # drawing pattern
-def space():
+def space(wh=25):
     t.pu()
-    t.goto(x+25, y)
+    t.goto(x+wh, y)
 
 def line_break():
 	t.pu()
@@ -58,14 +57,47 @@ def hcr():
 def b(color):
 	t.setheading(0)
 	t.pencolor(color)
-	t.pd()
 	vl()
 	t.pu()
 	t.goto(x,y)
 	hcr()
 	t.goto(x,y-20)
 	hcr()
-	t.goto(x+14,y)
+	space(14)
+
+def d(color):
+	t.setheading(0)
+	t.pencolor(color)
+	vl()
+	t.pd()
+	t.goto(x, y)
+	for i in range(29):
+		t.rt(6)
+		t.fd(2.1)
+	space()
+
+def e(color):
+	t.setheading(0)
+	t.pencolor(color)
+	vl()
+	t.goto(x, y)
+	hl()
+	t.goto(x, y-20)
+	hl()
+	t.goto(x, y-40)
+	hl()
+	space()
+	
+def f(color):
+	t.setheading(0)
+	t.pencolor(color)
+	vl()
+	t.goto(x, y)
+	hl()
+	t.goto(x, y-20)
+	hl()
+	space()
+	
 
 def h(color):
 	t.setheading(0)
@@ -75,8 +107,7 @@ def h(color):
 	vl()
 	t.goto(x, y-20)
 	hl()
-	t.goto(x+25, y)
-
+	space()
 
 def i(color):
 	t.setheading(0)
@@ -86,7 +117,26 @@ def i(color):
 	hl()
 	t.goto(x+10, y)
 	vl()
+	space()
+
+def l(color):
+	t.setheading(0)
+	t.pencolor(color)
+	vl()
+	hl()
+	space()
+
+def n(color):
+	t.setheading(0)
+	t.pencolor(color)
+	vl()
+	t.goto(x,y)
+	t.pd()
+	t.goto(x+25,y-40)
+	t.pu()
 	t.goto(x+25, y)
+	vl()
+	space(30)
 
 def p(color):
 	t.setheading(0)
