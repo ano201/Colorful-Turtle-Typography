@@ -2,8 +2,8 @@ import turtle
 from patterns import *
 
 # Input
-
-words = input("Enter your text: ").lower()
+#words = 'rdabdefhilwmwuwnprtvxz'
+words = input("Enter text:	").lower()
 
 # turtle screen setup
 screen = turtle.Screen()
@@ -21,7 +21,6 @@ _t.goto(_x, _y)
 
 _t.shape('turtle')
 _t.shapesize(0.5, 0.5)
-
 
 # Colors
 colors = [
@@ -46,17 +45,23 @@ colors = [
     "yellow"          # Yellow
 ]
 
-for idx,c in enumerate(words):
-	# Update global coordinates from current turtle position
+for idx, c in enumerate(words):
+    # Update current position
     _x, _y = _t.pos()
     
-    # Dynamically call function matching the character
-    if c in globals() and callable(globals()[c]):
-        globals()[c](_t, colors[idx%len(colors)], _x, _y)
+    # Auto Linebreak Check
+    if _x > 230:
+        _y -= 60
+        _x = -250
+        _t.goto(_x, _y)
+    
+    # Handle space or dynamically call character functions
+    if c == ' ':
+        space(_t, _x, _y, wh=25)
+    elif c in globals() and callable(globals()[c]):
+        globals()[c](_t, colors[idx % len(colors)], _x, _y)
     else:
         space(_t, _x, _y)
-    
-
 
 _t.goto(280, -180)
 

@@ -1,158 +1,164 @@
 # drawing pattern
-def space(_t, x, y, wh=25):
-	_t.pu()
-	_t.goto(x+wh, y)
+def space(t, x, y, wh=25):
+	t.pu()
+	t.goto(x+wh, y)
 
-def line_break(_t):
-	x,y = _t.pos()
-	_t.pu()
-	_t.goto(x, y-60)
+def vl(t, lng=40):
+	t.setheading(0)
+	t.pd()
+	t.rt(90)
+	t.fd(lng)
+	t.lt(90)
+	t.pu()
 	
-def vl(_t, lng=40):
-	_t.setheading(0)
-	_t.pd()
-	_t.rt(90)
-	_t.fd(lng)
-	_t.lt(90)
-	_t.pu()
-	
-def hl(_t, lng=20):
-	_t.setheading(0)
-	_t.pd()
-	_t.fd(lng)
-	_t.pu()
+def hl(t, lng=20):
+	t.setheading(0)
+	t.pd()
+	t.fd(lng)
+	t.pu()
 
-def hcr(_t):
-	_t.setheading(0)
-	_t.pd()
+def hcr(t):
+	t.setheading(0)
+	t.pd()
 	for rng in range(15):
 		if rng <= 3 or rng >= 9 :
-			_t.fd(3)
-			_t.rt(10)
+			t.fd(3)
+			t.rt(10)
 		else:
-			_t.fd(1)
-			_t.rt(14)
-	_t.pu()
+			t.fd(1)
+			t.rt(14)
+	t.pu()
 
 # Drawing Character
 
-def a(_t, color, x, y):
-	_t.setheading(0)
-	_t.pencolor(color)
-	_t.goto(x+10, y)
-	_t.pd()
-	_t.goto(x, y-40)
-	_t.pu()
-	_t.goto(x+10, y)
-	_t.pd()
-	_t.goto(x+20, y-40)
-	_t.pu()
-	_t.goto(x+3, y-30)
-	_t.pd()
-	hl(_t, 15)
-	space(_t, x, y)
+def a(t, color, x, y):
+	t.setheading(0)
+	t.pencolor(color)
+	t.goto(x+10, y)
+	t.pd()
+	t.goto(x, y-40)
+	t.pu()
+	t.goto(x+10, y)
+	t.pd()
+	t.goto(x+20, y-40)
+	t.pu()
+	t.goto(x+3, y-30)
+	t.pd()
+	hl(t, 15)
+	space(t, x, y)
 
-def b(_t, color, x, y):
-	_t.setheading(0)
-	_t.pencolor(color)
-	vl(_t)
-	_t.pu()
-	_t.goto(x,y)
-	hcr(_t)
-	_t.goto(x,y-20)
-	hcr(_t)
-	space(_t, x, y, 19)
+def b(t, color, x, y):
+	t.setheading(0)
+	t.pencolor(color)
+	vl(t)
+	t.pu()
+	t.goto(x,y)
+	hcr(t)
+	t.goto(x,y-20)
+	hcr(t)
+	space(t, x, y, 19)
 
-def d(_t, color, x, y):
-	_t.setheading(0)
-	_t.pencolor(color)
-	vl(_t)
-	_t.pd()
-	_t.goto(x, y)
+def d(t, color, x, y):
+	t.setheading(0)
+	t.pencolor(color)
+	vl(t)
+	t.pd()
+	t.goto(x, y)
 	for i in range(29):
-		_t.rt(6)
-		_t.fd(2.1)
-	space(_t, x, y)
+		t.rt(6)
+		t.fd(2.1)
+	space(t, x, y)
 
-def e(_t, color, x, y):
-	_t.setheading(0)
-	_t.pencolor(color)
-	vl(_t)
-	_t.goto(x, y)
-	hl(_t)
-	_t.goto(x, y-20)
-	hl(_t)
-	_t.goto(x, y-40)
-	hl(_t)
-	space(_t, x, y)
+def e(t, color, x, y):
+	t.setheading(0)
+	t.pencolor(color)
+	vl(t)
+	t.goto(x, y)
+	hl(t)
+	t.goto(x, y-20)
+	hl(t)
+	t.goto(x, y-40)
+	hl(t)
+	space(t, x, y)
 	
-def f(_t, color, x, y):
-	_t.setheading(0)
-	_t.pencolor(color)
-	vl(_t)
-	_t.goto(x, y)
-	hl(_t)
-	_t.goto(x, y-20)
-	hl(_t)
-	space(_t, x, y)
+def f(t, color, x, y):
+	t.setheading(0)
+	t.pencolor(color)
+	vl(t)
+	t.goto(x, y)
+	hl(t)
+	t.goto(x, y-20)
+	hl(t)
+	space(t, x, y)
 	
 
-def h(_t, color, x, y):
-	_t.setheading(0)
-	_t.pencolor(color)
-	vl(_t)
-	_t.goto(x+20, y)
-	vl(_t)
-	_t.goto(x, y-20)
-	hl(_t)
-	space(_t, x, y)
+def h(t, color, x, y):
+	t.setheading(0)
+	t.pencolor(color)
+	vl(t)
+	t.goto(x+20, y)
+	vl(t)
+	t.goto(x, y-20)
+	hl(t)
+	space(t, x, y)
 
-def i(_t, color, x, y):
-	_t.setheading(0)
-	_t.pencolor(color)
-	hl(_t)
-	_t.goto(x, y-40)
-	hl(_t)
-	_t.goto(x+10, y)
-	vl(_t)
-	space(_t, x, y)
+def i(t, color, x, y):
+	t.setheading(0)
+	t.pencolor(color)
+	hl(t)
+	t.goto(x, y-40)
+	hl(t)
+	t.goto(x+10, y)
+	vl(t)
+	space(t, x, y)
 
-def l(_t, color, x, y):
-	_t.setheading(0)
-	_t.pencolor(color)
-	vl(_t)
-	hl(_t)
-	space(_t, x, y)
+def l(t, color, x, y):
+	t.setheading(0)
+	t.pencolor(color)
+	vl(t)
+	hl(t)
+	space(t, x, y)
 
-def n(_t, color, x, y):
-	_t.setheading(0)
-	_t.pencolor(color)
-	vl(_t)
-	_t.goto(x,y)
-	_t.pd()
-	_t.goto(x+25,y-40)
-	_t.pu()
-	_t.goto(x+25, y)
-	vl(_t)
-	space(_t, x, y, 30)
+def m(t, color, x, y):
+	t.setheading(0)
+	t.pencolor(color)
+	vl(t)
+	t.goto(x, y)
+	t.pd()
+	t.goto(x+10, y-20)
+	t.goto(x+20, y)
+	vl(t)
+	space(t, x, y)
 
-def p(_t, color, x, y):
-	_t.setheading(0)
-	_t.pencolor(color)
-	vl(_t)
-	_t.goto(x, y)
-	hcr(_t)
-	space(_t, x, y, 19)
+def n(t, color, x, y):
+	t.setheading(0)
+	t.pencolor(color)
+	vl(t)
+	t.goto(x,y)
+	t.pd()
+	t.goto(x+25,y-40)
+	t.pu()
+	t.goto(x+25, y)
+	vl(t)
+	space(t, x, y, 30)
+
+def p(t, color, x, y):
+	t.setheading(0)
+	t.pencolor(color)
+	vl(t)
+	t.goto(x, y)
+	hcr(t)
+	space(t, x, y, 19)
 	
-def r(_t, color, x, y):
-	_t.setheading(0)
-	_t.pencolor(color)
-	vl(_t)
-	_t.goto(x, y)
-	hcr(_t)
-	_t.pd()
-	_t.goto(x+13, y-40)
-	space(_t, x, y, 20)
+def r(t, color, x, y):
+	t.setheading(0)
+	t.pencolor(color)
+	vl(t)
+	t.goto(x, y)
+	hcr(t)
+	t.pd()
+	t.goto(x+18, y-40)
+	space(t, x, y, 22)
 
 def t(_t, color, x, y):
 	_t.setheading(0)
@@ -161,31 +167,60 @@ def t(_t, color, x, y):
 	_t.goto(x+10, y)
 	vl(_t)
 	space(_t, x, y)
+	
+	
+def u(t, color, x, y):
+	t.setheading(0)
+	t.pencolor(color)
+	vl(t, 20)
+	t.goto(x+20, y)
+	vl(t, 20)
+	t.goto(x, y-20)
+	t.pd()
+	t.rt(90)
+	for a in range(30):
+		t.fd(1.6)
+		t.lt(2)
+		if a > 10 and a < 18:
+			t.lt(18)
+			t.fd(1.19)
+	space(t, x, y)
+	
 
-def v(_t, color, x, y):
-	_t.setheading(0)
-	_t.pencolor(color)
-	_t.pd()
-	_t.goto(x+12.5, y-40)
-	_t.goto(x+25, y)
-	space(_t, x, y, 30)
+def v(t, color, x, y):
+	t.setheading(0)
+	t.pencolor(color)
+	t.pd()
+	t.goto(x+12.5, y-40)
+	t.goto(x+25, y)
+	space(t, x, y, 30)
 
-def x(_t, color, _x, y):
-	_t.setheading(0)
-	_t.pencolor(color)
-	_t.pd()
-	_t.goto(_x+25, y-40)
-	_t.pu()
-	_t.goto(_x+25, y)
-	_t.pd()
-	_t.goto(_x, y-40)
-	space(_t, _x, y, 30)
+def w(t, color, x, y):
+	t.setheading(0)
+	t.pencolor(color)
+	vl(t)
+	t.pd()
+	t.goto(x+10, y)
+	t.goto(x+20, y-40)
+	t.goto(x+20, y)
+	space(t, x, y)
 
-def z(_t, color, x, y):
-	_t.setheading(0)
-	_t.pencolor(color)
-	hl(_t)
-	_t.pd()
-	_t.goto(x, y-40)
-	hl(_t)
-	space(_t, x, y)
+def x(t, color, _x, y):
+	t.setheading(0)
+	t.pencolor(color)
+	t.pd()
+	t.goto(_x+25, y-40)
+	t.pu()
+	t.goto(_x+25, y)
+	t.pd()
+	t.goto(_x, y-40)
+	space(t, _x, y, 30)
+
+def z(t, color, x, y):
+	t.setheading(0)
+	t.pencolor(color)
+	hl(t)
+	t.pd()
+	t.goto(x, y-40)
+	hl(t)
+	space(t, x, y)
