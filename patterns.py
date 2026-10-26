@@ -112,6 +112,37 @@ def i(t, color, x, y):
 	vl(t)
 	space(t, x, y)
 
+def j(t, color, x, y):
+	t.setheading(0)
+	t.pencolor(color)
+	t.goto(x+10, y)
+	hl(t)
+	t.goto(x+20, y)
+	vl(t, 25)
+	t.pd()
+	t.rt(90)
+	for a in range(20):
+		if a < 8:
+			t.fd(2)
+			t.rt(4)
+		elif a < 15:
+			t.fd(1)
+			t.rt(10)
+		else:
+			t.rt(15)
+			t.fd(3)
+	space(t, x, y, 35)
+	
+def k(t, color, x, y):
+	t.setheading(0)
+	t.pencolor(color)
+	vl(t)
+	t.goto(x+20, y)
+	t.pd()
+	t.goto(x, y-20)
+	t.goto(x+20, y-40)
+	space(t, x, y)
+
 def l(t, color, x, y):
 	t.setheading(0)
 	t.pencolor(color)
@@ -142,6 +173,17 @@ def n(t, color, x, y):
 	vl(t)
 	space(t, x, y, 30)
 
+def o(t, color, x, y):
+	t.setheading(0)
+	t.pencolor(color)
+	t.goto(x+22, y)
+	t.pd()
+	for r in range(30):
+		t.rt(12)
+		t.fd(4)
+	space(t, x, y, 45)
+	
+
 def p(t, color, x, y):
 	t.setheading(0)
 	t.pencolor(color)
@@ -149,6 +191,16 @@ def p(t, color, x, y):
 	t.goto(x, y)
 	hcr(t)
 	space(t, x, y, 19)
+	
+def q(t, color, x, y):
+	t.setheading(0)
+	t.pencolor(color)
+	o(t, color, x, y)
+	t.goto(x+25, y-20)
+	t.pd()
+	t.goto(x+40, y-37)
+	space(t, x, y, 45)
+	
 	
 def r(t, color, x, y):
 	t.setheading(0)
@@ -198,10 +250,10 @@ def v(t, color, x, y):
 def w(t, color, x, y):
 	t.setheading(0)
 	t.pencolor(color)
-	vl(t)
 	t.pd()
+	t.goto(x+5, y-40)
 	t.goto(x+10, y)
-	t.goto(x+20, y-40)
+	t.goto(x+15, y-40)
 	t.goto(x+20, y)
 	space(t, x, y)
 
@@ -215,6 +267,17 @@ def x(t, color, _x, y):
 	t.pd()
 	t.goto(_x, y-40)
 	space(t, _x, y, 30)
+	
+def y(t, color, x, y):
+	t.setheading(0)
+	t.pencolor(color)
+	t.pd()
+	t.goto(x+10, y-20)
+	t.goto(x+20, y)
+	t.pu()
+	t.goto(x+10, y-20)
+	vl(t, 20)
+	space(t, x, y)
 
 def z(t, color, x, y):
 	t.setheading(0)

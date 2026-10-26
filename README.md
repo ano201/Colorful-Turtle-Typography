@@ -6,8 +6,8 @@ A custom Python project built using Turtle graphics to dynamically render text s
 ![Colorful Turtle Typography Output](Screenshot.png)
 
 ## ✨ Supported Characters (Current)
-The engine currently supports a robust set of uppercase characters and spacing, with more letters coming soon:
-- **`a`**, **`b`**, **`d`**, **`e`**, **`f`**, **`h`**, **`i`**, **`l`**, **`m`**, **`n`**, **`p`**, **`r`**, **`t`**, **`u`**, **`v`**, **`w`**, **`x`**, **`z`**
+The engine currently supports a massive set of uppercase characters and spacing, with more letters coming soon:
+- **`a`**, **`b`**, **`d`**, **`e`**, **`f`**, **`h`**, **`i`**, **`j`**, **`k`**, **`l`**, **`m`**, **`n`**, **`o`**, **`p`**, **`q`**, **`r`**, **`t`**, **`u`**, **`v`**, **`w`**, **`x`**, **`y`**, **`z`**
 - **`space`** (for word spacing)
 
 ## 🚀 Features
